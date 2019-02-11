@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  book: one
+  student: one
+  from_date: 2019-02-11 23:22:39
+  to_date: 2019-02-11 23:22:39
+
+two:
+  book: two
+  student: two
+  from_date: 2019-02-11 23:22:39
+  to_date: 2019-02-11 23:22:39
