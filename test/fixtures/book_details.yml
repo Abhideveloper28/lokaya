@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject: MyString
+  language: MyString
+  publisher: MyString
+  edition: MyString
+  pages: 1
+  copies: 1
+  category: 
+
+two:
+  subject: MyString
+  language: MyString
+  publisher: MyString
+  edition: MyString
+  pages: 1
+  copies: 1
+  category: 
