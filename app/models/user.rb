@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   enum role: [:admin, :manager]
+
+  has_many :borrowers, class_name: 'Borrower', primary_key: 'id', foreign_key: 'issued_by_user'
 end

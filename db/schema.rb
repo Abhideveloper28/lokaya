@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_12_202407) do
+ActiveRecord::Schema.define(version: 2019_02_16_151359) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,7 +59,9 @@ ActiveRecord::Schema.define(version: 2019_02_12_202407) do
     t.datetime "to_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "issued_by_id"
     t.index ["book_id"], name: "index_borrowers_on_book_id"
+    t.index ["issued_by_id"], name: "index_borrowers_on_issued_by_id"
     t.index ["student_id"], name: "index_borrowers_on_student_id"
   end
 
@@ -102,4 +104,5 @@ ActiveRecord::Schema.define(version: 2019_02_12_202407) do
   add_foreign_key "books", "categories"
   add_foreign_key "borrowers", "books"
   add_foreign_key "borrowers", "students"
+  add_foreign_key "borrowers", "users", column: "issued_by_id"
 end
